@@ -1,0 +1,76 @@
+.mint-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 333px;
+
+  .title {
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(to right, #aa11ee, #9f11ef);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ohm-card {
+    text-align: center;
+    min-width: 280px;
+    max-width: 350px;
+    min-height: 300px;
+    // height: 100%;
+    max-height: 669px;
+  }
+
+  .preview {
+    margin-top: 10px;
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    min-height: 220px;
+    max-height: 220px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    &.gif-1 {
+      background-image: url("../../assets/images/01_creation.gif");
+    }
+    &.gif-2 {
+      background-image: url("../../assets/images/02_abundance.gif");
+    }
+    &.gif-3 {
+      background-image: url("../../assets/images/03_flow.gif");
+    }
+  }
+  .mint-data {
+    margin-top: 10px;
+    width: 100%;
+    min-width: 200px;
+    max-width: 333px;
+    max-height: 222px;
+    // height: 100%;
+    // &.expanded {
+    //   height: 100%;
+    // }
+  }
+}
+
+.mobile,
+.tablet {
+  .grid-container {
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+  }
+  .preview {
+    min-height: 300px;
+    min-width: 300px;
+  }
+  .ohm-card {
+    width: 100% !important;
+    min-width: 333px !important;
+    max-height: 100%;
+    margin-bottom: 5px !important;
+  }
+}
