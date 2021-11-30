@@ -116,23 +116,23 @@ And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
 
 # New Discord Roles @ GVO
 
-Coordinatooor : sort of the navigator, stratego style
-Daooor : is making us run the show DAO style
-Moderatooor : runs the podcast & monthly community call
-Art Directooor : curator of fine art for the NFT Vaults
-Illustratooor : makes stuff look good
-Enginooor : shipping full-stack web3 code
-Threadooor : is fricking good at doing the CT thing
-Incubatooor : wants to see more D2D collabs ...
-Collectooor : wants to buy NFT's
-Calculatooor : makes sure the treasury is growing
-Documentooor : keeps notion, airtable and github clean
-Enjoyooor : L1 guestpass
-Explorooor : L2 guestpass
-Contributooor : is earning incooome by donating time
-Whitelistooor : get's all the good stuff as bonus
-Innovatooor : the OG's on the VIP list
-Robotooor : Discord bot doing all the heavy lifting
-Administratooor: Makes sure the Discord bots are gucci
+* Coordinatooor : sort of the navigator, stratego style
+* Daooor : is making us run the show DAO style
+* Moderatooor : runs the podcast & monthly community call
+* Art Directooor : curator of fine art for the NFT Vaults
+* Illustratooor : makes stuff look good
+* Enginooor : shipping full-stack web3 code
+* Threadooor : is fricking good at doing the CT thing
+* Incubatooor : wants to see more D2D collabs ...
+* Collectooor : wants to buy NFT's
+* Calculatooor : makes sure the treasury is growing
+* Documentooor : keeps notion, airtable and github clean
+* Enjoyooor : L1 guestpass
+* Explorooor : L2 guestpass
+* Contributooor : is earning incooome by donating time
+* Whitelistooor : get's all the good stuff as bonus
+* Innovatooor : the OG's on the VIP list
+* Robotooor : Discord bot doing all the heavy lifting
+* Administratooor: Makes sure the Discord bots are gucci
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
