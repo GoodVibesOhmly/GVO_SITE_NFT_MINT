@@ -1,5 +1,5 @@
-# [Ω Olympus Frontend](https://app.olympusdao.finance/)
-This is the front-end repo for Olympus that allows users be part of the future of Greece. 
+# [Good Vibes Ohmly](https://livethelifetvdao.notion.site/livethelifetvdao/Good-Vibes-Ohmly-Draft-Proposal-34b49279d917473a8054443d0c6d2ae1)
+This is the front-end repo for Good Vibes Ohmly. 
 
 **_ Note We're currently in the process of switching to TypeScript. Please read  this  guide on how to use TypeScript for this repository. https://github.com/OlympusDAO/olympus-frontend/wiki/TypeScript-Refactor-General-Guidelines _**
 
@@ -7,19 +7,26 @@ This is the front-end repo for Olympus that allows users be part of the future o
 
 Required: 
 - [Node v14](https://nodejs.org/download/release/latest-v14.x/)  
-- [Yarn](https://classic.yarnpkg.com/en/docs/install/) 
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [Yarn](https://classic.yarnpkg.com/en/docs/install/)
 - [Git](https://git-scm.com/downloads)
 
 
 ```bash
-$ git clone https://github.com/OlympusDAO/olympusdao.git
-$ cd olympusdao
+$ git clone git@github.com:GoodVibesOhmly/GVO.git
+$ cd GVO
 
 # set up your environment variables
 # read the comments in the .env files for what is required/optional
 $ cp .env.example .env
-
 # fill in your own values in .env, then =>
+```
+### NPM
+```bash
+$ npm install
+$ npm run start
+```
+### Yarn
+```bash
 $ yarn
 $ yarn start
 ```
@@ -74,16 +81,14 @@ _**TODO**: TheGraph implementation/how/why we use it._
 Commits to the follow branches are automatically deployed to their respective URLs.
 | Branch | URL |
 | --- | --- |
-| master | https://app.olympusdao.finance |
-| deploy | https://staging.olympusdao.finance |
+| master | https://app. |
+| deploy | https://staging. |
 
-**Pull Requests**:
-Each PR into master will get its own custom URL that is visible on the PR page. QA & validate changes on that URL before merging into the deploy branch. 
 
 
 ## 👏🏽 Contributing Guidelines 
 
-We keep an updated list of bugs/feature requests in [Github Issues](https://github.com/OlympusDAO/olympusdao/issues). 
+We keep an updated list of bugs/feature requests in [Github Issues](https://github.com/GoodVibesOhmly/GVO/issues). 
 
 
 ![GitHub issues](https://img.shields.io/github/issues/olympusdao/olympusdao?style=flat-square)
@@ -100,11 +105,12 @@ Only the following people have merge access for the master branch.
 * [@Girth Brooks](https://github.com/dwjanus)
 * [@Unbanksy](https://github.com/unbanksy)
 * [@ZayenX](https://github.com/lolchocotaco)
+* [@royscheeren](https://github.com/royscheeren)
 
 
 ## 🗣 Community
 
-* [Join our Discord](https://discord.gg/gGZUMVDuhQ) and ask how you can get involved with the DAO!
+* [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
 
 # GVO / Good Vibes Ohmly
 
@@ -136,3 +142,6 @@ And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
 * Administratooor: Makes sure the Discord bots are gucci
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
+
+
+__ Forked From [Ω Olympus Frontend](https://app.olympusdao.finance/)
