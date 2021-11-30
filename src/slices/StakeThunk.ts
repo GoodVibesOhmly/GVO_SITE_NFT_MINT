@@ -1,8 +1,8 @@
 import { ethers, BigNumber } from "ethers";
 import { addresses } from "../constants";
-import { abi as ManifestERC20Abi } from "../abi/ManifestERC20.json";
-import { abi as sManifestERC20Abi } from "../abi/sManifestERC20.json";
-import { abi as ManifestStaking } from "../abi/ManifestStaking.json";
+import { abi as GoodVibesOhmlyERC20Abi } from "../abi/GoodVibesOhmlyERC20.json";
+import { abi as sGoodVibesOhmlyERC20Abi } from "../abi/sGoodVibesOhmlyERC20.json";
+import { abi as GoodVibesOhmlyStaking } from "../abi/GoodVibesOhmlyStaking.json";
 import { abi as StakingHelper } from "../abi/StakingHelper.json";
 import { clearPendingTxn, fetchPendingTxns, getStakingTypeText } from "./PendingTxnsSlice";
 import { createAsyncThunk } from "@reduxjs/toolkit";
@@ -16,9 +16,9 @@ function alreadyApprovedToken(token: string, stakeAllowance: BigNumber, unstakeA
   let applicableAllowance = bigZero;
 
   // determine which allowance to check
-  if (token === "mnfst") {
+  if (token === "gvo") {
     applicableAllowance = stakeAllowance;
-  } else if (token === "smnfst") {
+  } else if (token === "sGVO") {
     applicableAllowance = unstakeAllowance;
   }
 
@@ -37,15 +37,15 @@ export const changeApproval = createAsyncThunk(
     }
 
     const signer = provider.getSigner();
-    const mnfstContract = new ethers.Contract(addresses[networkID].MNFST_ADDRESS as string, ManifestERC20Abi, signer);
-    const smnfstContract = new ethers.Contract(
-      addresses[networkID].SMNFST_ADDRESS as string,
-      sManifestERC20Abi,
+    const gvoContract = new ethers.Contract(addresses[networkID].GVO_ADDRESS as string, GoodVibesOhmlyERC20Abi, signer);
+    const sGVOContract = new ethers.Contract(
+      addresses[networkID].sGVO_ADDRESS as string,
+      sGoodVibesOhmlyERC20Abi,
       signer,
     );
     let approveTx;
-    let stakeAllowance = await mnfstContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS);
-    let unstakeAllowance = await smnfstContract.allowance(address, addresses[networkID].STAKING_ADDRESS);
+    let stakeAllowance = await gvoContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS);
+    let unstakeAllowance = await sGVOContract.allowance(address, addresses[networkID].STAKING_ADDRESS);
 
     // return early if approval has already happened
     if (alreadyApprovedToken(token, stakeAllowance, unstakeAllowance)) {
@@ -53,29 +53,29 @@ export const changeApproval = createAsyncThunk(
       return dispatch(
         fetchAccountSuccess({
           staking: {
-            mnfstStake: +stakeAllowance,
-            mnfstUnstake: +unstakeAllowance,
+            gvoStake: +stakeAllowance,
+            gvoUnstake: +unstakeAllowance,
           },
         }),
       );
     }
 
     try {
-      if (token === "mnfst") {
+      if (token === "gvo") {
         // won't run if stakeAllowance > 0
-        approveTx = await mnfstContract.approve(
+        approveTx = await gvoContract.approve(
           addresses[networkID].STAKING_HELPER_ADDRESS,
           ethers.utils.parseUnits("1000000000", "gwei").toString(),
         );
-      } else if (token === "smnfst") {
-        approveTx = await smnfstContract.approve(
+      } else if (token === "sGVO") {
+        approveTx = await sGVOContract.approve(
           addresses[networkID].STAKING_ADDRESS,
           ethers.utils.parseUnits("1000000000", "gwei").toString(),
         );
       }
 
-      const text = "Approve " + (token === "mnfst" ? "Staking" : "Unstaking");
-      const pendingTxnType = token === "mnfst" ? "approve_staking" : "approve_unstaking";
+      const text = "Approve " + (token === "gvo" ? "Staking" : "Unstaking");
+      const pendingTxnType = token === "gvo" ? "approve_staking" : "approve_unstaking";
       dispatch(fetchPendingTxns({ txnHash: approveTx.hash, text, type: pendingTxnType }));
 
       await approveTx.wait();
@@ -89,14 +89,14 @@ export const changeApproval = createAsyncThunk(
     }
 
     // go get fresh allowances
-    stakeAllowance = await mnfstContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS);
-    unstakeAllowance = await smnfstContract.allowance(address, addresses[networkID].STAKING_ADDRESS);
+    stakeAllowance = await gvoContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS);
+    unstakeAllowance = await sGVOContract.allowance(address, addresses[networkID].STAKING_ADDRESS);
 
     return dispatch(
       fetchAccountSuccess({
         staking: {
-          mnfstStake: +stakeAllowance,
-          mnfstUnstake: +unstakeAllowance,
+          gvoStake: +stakeAllowance,
+          gvoUnstake: +unstakeAllowance,
         },
       }),
     );
@@ -112,7 +112,7 @@ export const changeStake = createAsyncThunk(
     }
 
     const signer = provider.getSigner();
-    const staking = new ethers.Contract(addresses[networkID].STAKING_ADDRESS as string, ManifestStaking, signer);
+    const staking = new ethers.Contract(addresses[networkID].STAKING_ADDRESS as string, GoodVibesOhmlyStaking, signer);
     const stakingHelper = new ethers.Contract(
       addresses[networkID].STAKING_HELPER_ADDRESS as string,
       StakingHelper,

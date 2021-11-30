@@ -7,7 +7,7 @@ import commonSettings from "./global.js";
 
 const darkTheme = {
   color: "#fff",
-  purple: "#B900FF",
+  purple: "#ca5b02",
   gray: "#A3A3A3",
   textHighlightColor: "#E08EFF",
   backgroundColor: "rgba(44, 7, 69, 1)",
@@ -19,13 +19,13 @@ const darkTheme = {
   backdropBg: "rgba(54, 56, 64, 0.5)",
   largeTextColor: "#F4D092",
   activeLinkColor: "E08EFF",
-  activeLinkSvgColor: "#B900FF",
+  activeLinkSvgColor: "#ca5b02",
   primaryButtonColor: "#fff",
-  primaryButtonBG: "#B900FF",
-  primaryButtonHoverBG: "#8F00FF",
+  primaryButtonBG: "#ca5b02",
+  primaryButtonHoverBG: "#Ff7200",
   secondaryButtonHoverBG: "rgba(54, 56, 64, 1)",
   outlinedPrimaryButtonHoverBG: "rgba(185,0,255,0.1)",
-  outlinedPrimaryButtonHoverColor: "#B900FF",
+  outlinedPrimaryButtonHoverColor: "#ca5b02",
   outlinedSecondaryButtonHoverBG: "transparent",
   outlinedSecondaryButtonHoverColor: "#F8CC82", //gold
   containedSecondaryButtonHoverBG: "rgba(255, 255, 255, 0.15)",
@@ -59,7 +59,7 @@ export const dark = responsiveFontSizes(
         graphStrokeColor: darkTheme.graphStrokeColor,
       },
       typography: {
-        fontFamily: "General",
+        fontFamily: "Sk-Modernist",
       },
       props: {
         MuiSvgIcon: {

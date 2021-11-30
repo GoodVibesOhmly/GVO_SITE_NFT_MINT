@@ -38,7 +38,7 @@ function a11yProps(index) {
   };
 }
 
-const sMnfstImg = getTokenImage("smnfst");
+const sGVOImg = getTokenImage("sGVO");
 // const ohmImg = getOhmTokenImage(16, 16);
 
 function Stake() {
@@ -57,17 +57,17 @@ function Stake() {
     return state.app.fiveDayRate;
   });
 
-  const mnfstBalance = useSelector(state => {
-    return state.account.balances && state.account.balances.mnfst;
+  const gvoBalance = useSelector(state => {
+    return state.account.balances && state.account.balances.gvo;
   });
-  const smnfstBalance = useSelector(state => {
-    return state.account.balances && state.account.balances.smnfst;
+  const sGVOBalance = useSelector(state => {
+    return state.account.balances && state.account.balances.sGVO;
   });
   const stakeAllowance = useSelector(state => {
-    return state.account.staking && state.account.staking.mnfstStake;
+    return state.account.staking && state.account.staking.gvoStake;
   });
   const unstakeAllowance = useSelector(state => {
-    return state.account.staking && state.account.staking.mnfstUnstake;
+    return state.account.staking && state.account.staking.gvoUnstake;
   });
   const stakingRebase = useSelector(state => {
     return state.app.stakingRebase;
@@ -85,9 +85,9 @@ function Stake() {
 
   const setMax = () => {
     if (view === 0) {
-      setQuantity(mnfstBalance);
+      setQuantity(gvoBalance);
     } else {
-      setQuantity(smnfstBalance);
+      setQuantity(sGVOBalance);
     }
   };
 
@@ -104,12 +104,12 @@ function Stake() {
 
     // 1st catch if quantity > balance
     let gweiValue = ethers.utils.parseUnits(quantity, "gwei");
-    if (action === "stake" && gweiValue.gt(ethers.utils.parseUnits(mnfstBalance, "gwei"))) {
-      return dispatch(error("You cannot stake more than your MNFST balance."));
+    if (action === "stake" && gweiValue.gt(ethers.utils.parseUnits(gvoBalance, "gwei"))) {
+      return dispatch(error("You cannot stake more than your GVO balance."));
     }
 
-    if (action === "unstake" && gweiValue.gt(ethers.utils.parseUnits(smnfstBalance, "gwei"))) {
-      return dispatch(error("You cannot unstake more than your sMNFST balance."));
+    if (action === "unstake" && gweiValue.gt(ethers.utils.parseUnits(sGVOBalance, "gwei"))) {
+      return dispatch(error("You cannot unstake more than your sGVO balance."));
     }
 
     await dispatch(changeStake({ address, action, value: quantity.toString(), provider, networkID: chainID }));
@@ -117,8 +117,8 @@ function Stake() {
 
   const hasAllowance = useCallback(
     token => {
-      if (token === "mnfst") return stakeAllowance > 0;
-      if (token === "smnfst") return unstakeAllowance > 0;
+      if (token === "gvo") return stakeAllowance > 0;
+      if (token === "sGVO") return unstakeAllowance > 0;
       return 0;
     },
     [stakeAllowance, unstakeAllowance],
@@ -138,7 +138,7 @@ function Stake() {
     setView(newView);
   };
 
-  const trimmedBalance = Number(smnfstBalance).toFixed(4);
+  const trimmedBalance = Number(sGVOBalance).toFixed(4);
 
   const trimmedStakingAPY = trim(stakingAPY * 100, 1);
   const stakingRebasePercentage = trim(stakingRebase * 100, 4);
@@ -201,7 +201,7 @@ function Stake() {
                           Current Index
                         </Typography>
                         <Typography variant="h4">
-                          {currentIndex ? <>{trim(currentIndex, 1)} MNFST</> : <Skeleton width="150px" />}
+                          {currentIndex ? <>{trim(currentIndex, 1)} GVO</> : <Skeleton width="150px" />}
                         </Typography>
                       </div>
                     </Grid>
@@ -235,20 +235,20 @@ function Stake() {
 
                       <Box className="stake-action-row " display="flex" alignItems="center">
                         {address && !isAllowanceDataLoading ? (
-                          (!hasAllowance("mnfst") && view === 0) || (!hasAllowance("smnfst") && view === 1) ? (
+                          (!hasAllowance("gvo") && view === 0) || (!hasAllowance("sGVO") && view === 1) ? (
                             <Box className="help-text">
                               <Typography variant="body1" className="stake-note" color="textSecondary">
                                 {view === 0 ? (
                                   <>
-                                    First time staking <b>MNFST</b>?
+                                    First time staking <b>GVO</b>?
                                     <br />
-                                    Please approve Manifest to use your <b>MNFST</b> for staking.
+                                    Please approve Good Vibes Ohmly to use your <b>GVO</b> for staking.
                                   </>
                                 ) : (
                                   <>
-                                    First time unstaking <b>sMNFST</b>?
+                                    First time unstaking <b>sGVO</b>?
                                     <br />
-                                    Please approve Manifest to use your <b>sMNFST</b> for unstaking.
+                                    Please approve Good Vibes Ohmly to use your <b>sGVO</b> for unstaking.
                                   </>
                                 )}
                               </Typography>
@@ -281,7 +281,7 @@ function Stake() {
                         <TabPanel value={view} index={0} className="stake-tab-panel">
                           {isAllowanceDataLoading ? (
                             <Skeleton />
-                          ) : address && hasAllowance("mnfst") ? (
+                          ) : address && hasAllowance("gvo") ? (
                             <Button
                               className="stake-button"
                               variant="contained"
@@ -291,7 +291,7 @@ function Stake() {
                                 onChangeStake("stake");
                               }}
                             >
-                              {txnButtonText(pendingTransactions, "staking", "Stake MNFST")}
+                              {txnButtonText(pendingTransactions, "staking", "Stake GVO")}
                             </Button>
                           ) : (
                             <Button
@@ -300,7 +300,7 @@ function Stake() {
                               color="primary"
                               disabled={isPendingTxn(pendingTransactions, "approve_staking")}
                               onClick={() => {
-                                onSeekApproval("mnfst");
+                                onSeekApproval("gvo");
                               }}
                             >
                               {txnButtonText(pendingTransactions, "approve_staking", "Approve")}
@@ -310,7 +310,7 @@ function Stake() {
                         <TabPanel value={view} index={1} className="stake-tab-panel">
                           {isAllowanceDataLoading ? (
                             <Skeleton />
-                          ) : address && hasAllowance("smnfst") ? (
+                          ) : address && hasAllowance("sGVO") ? (
                             <Button
                               className="stake-button"
                               variant="contained"
@@ -320,7 +320,7 @@ function Stake() {
                                 onChangeStake("unstake");
                               }}
                             >
-                              {txnButtonText(pendingTransactions, "unstaking", "Unstake MNFST")}
+                              {txnButtonText(pendingTransactions, "unstaking", "Unstake GVO")}
                             </Button>
                           ) : (
                             <Button
@@ -329,7 +329,7 @@ function Stake() {
                               color="primary"
                               disabled={isPendingTxn(pendingTransactions, "approve_unstaking")}
                               onClick={() => {
-                                onSeekApproval("smnfst");
+                                onSeekApproval("sGVO");
                               }}
                             >
                               {txnButtonText(pendingTransactions, "approve_unstaking", "Approve")}
@@ -343,21 +343,21 @@ function Stake() {
                       <div className="data-row">
                         <Typography variant="body1">Your Balance</Typography>
                         <Typography variant="body1">
-                          {isAppLoading ? <Skeleton width="80px" /> : <>{trim(mnfstBalance, 4)} MNFST</>}
+                          {isAppLoading ? <Skeleton width="80px" /> : <>{trim(gvoBalance, 4)} GVO</>}
                         </Typography>
                       </div>
 
                       <div className="data-row">
                         <Typography variant="body1">Your Staked Balance</Typography>
                         <Typography variant="body1">
-                          {isAppLoading ? <Skeleton width="80px" /> : <>{trimmedBalance} sMNFST</>}
+                          {isAppLoading ? <Skeleton width="80px" /> : <>{trimmedBalance} sGVO</>}
                         </Typography>
                       </div>
 
                       <div className="data-row">
                         <Typography variant="body1">Next Reward Amount</Typography>
                         <Typography variant="body1">
-                          {isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} sMNFST</>}
+                          {isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} sGVO</>}
                         </Typography>
                       </div>
 

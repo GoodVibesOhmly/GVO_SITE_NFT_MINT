@@ -2,7 +2,7 @@
   "abi": [
     {
       "inputs": [
-        { "internalType": "address", "name": "_MNFST", "type": "address" },
+        { "internalType": "address", "name": "_GVO", "type": "address" },
         { "internalType": "address", "name": "_OHM", "type": "address" },
         { "internalType": "address", "name": "_sOHM", "type": "address" },
         { "internalType": "uint256", "name": "_blocksNeededForQueue", "type": "uint256" }
@@ -13,7 +13,7 @@
     {
       "anonymous": false,
       "inputs": [
-        { "indexed": true, "internalType": "enum ManifestTreasury.MANAGING", "name": "managing", "type": "uint8" },
+        { "indexed": true, "internalType": "enum GoodVibesOhmlyTreasury.MANAGING", "name": "managing", "type": "uint8" },
         { "indexed": false, "internalType": "address", "name": "activated", "type": "address" },
         { "indexed": false, "internalType": "bool", "name": "result", "type": "bool" }
       ],
@@ -23,7 +23,7 @@
     {
       "anonymous": false,
       "inputs": [
-        { "indexed": true, "internalType": "enum ManifestTreasury.MANAGING", "name": "managing", "type": "uint8" },
+        { "indexed": true, "internalType": "enum GoodVibesOhmlyTreasury.MANAGING", "name": "managing", "type": "uint8" },
         { "indexed": false, "internalType": "address", "name": "queued", "type": "address" }
       ],
       "name": "ChangeQueued",
@@ -143,7 +143,7 @@
     },
     {
       "inputs": [],
-      "name": "MNFST",
+      "name": "GVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
@@ -340,7 +340,7 @@
     },
     {
       "inputs": [
-        { "internalType": "enum ManifestTreasury.MANAGING", "name": "_managing", "type": "uint8" },
+        { "internalType": "enum GoodVibesOhmlyTreasury.MANAGING", "name": "_managing", "type": "uint8" },
         { "internalType": "address", "name": "_address", "type": "address" }
       ],
       "name": "queue",
@@ -351,7 +351,7 @@
     { "inputs": [], "name": "renounceManagement", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
     {
       "inputs": [{ "internalType": "uint256", "name": "_amount", "type": "uint256" }],
-      "name": "repayDebtWithMNFST",
+      "name": "repayDebtWithGVO",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -431,21 +431,21 @@
     },
     {
       "inputs": [],
-      "name": "sMNFST",
+      "name": "sGVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [],
-      "name": "sMNFSTQueue",
+      "name": "sGVOQueue",
       "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [
-        { "internalType": "enum ManifestTreasury.MANAGING", "name": "_managing", "type": "uint8" },
+        { "internalType": "enum GoodVibesOhmlyTreasury.MANAGING", "name": "_managing", "type": "uint8" },
         { "internalType": "address", "name": "_address", "type": "address" },
         { "internalType": "address", "name": "_calculator", "type": "address" }
       ],

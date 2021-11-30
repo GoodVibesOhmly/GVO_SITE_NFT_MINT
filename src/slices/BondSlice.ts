@@ -118,7 +118,7 @@ export const calcBondDetails = createAsyncThunk(
         let bondPriceUSD = bondPrice * ohmPrice;
         bondPrice = bondPriceUSD;
         // console.log("bond price converted to USD: ", bondPriceUSD);
-        // console.log("market price of MNFST: ", marketPrice);
+        // console.log("market price of GVO: ", marketPrice);
         bondDiscount = (marketPrice - bondPrice) / bondPrice; // 1 - bondPrice / (bondPrice * Math.pow(10, 9));
         // console.log("bond discount: ", bondDiscount);
       } else {
@@ -168,7 +168,7 @@ export const calcBondDetails = createAsyncThunk(
       const errorString =
         "You're trying to bond more than the maximum payout available! The maximum bond payout is " +
         (maxBondPrice / Math.pow(10, 9)).toFixed(2).toString() +
-        " MNFST.";
+        " GVO.";
       dispatch(error(errorString));
     }
 

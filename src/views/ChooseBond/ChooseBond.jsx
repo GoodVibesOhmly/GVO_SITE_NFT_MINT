@@ -93,7 +93,7 @@ function ChooseBond() {
               <Grid item xs={6} className={`ohm-price`}>
                 <Box textAlign={`${isVerySmallScreen ? "right" : "center"}`}>
                   <Typography variant="h5" color="textSecondary">
-                    MNFST Price
+                    GVO Price
                   </Typography>
                   <Typography variant="h4">
                     {isAppLoading ? <Skeleton width="100px" /> : formatCurrency(marketPrice, 2)}

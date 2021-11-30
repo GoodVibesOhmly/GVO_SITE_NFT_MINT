@@ -2,8 +2,8 @@
   "abi": [
     {
       "inputs": [
-        { "internalType": "address", "name": "_MNFST", "type": "address" },
-        { "internalType": "address", "name": "_sMNFST", "type": "address" },
+        { "internalType": "address", "name": "_GVO", "type": "address" },
+        { "internalType": "address", "name": "_sGVO", "type": "address" },
         { "internalType": "uint256", "name": "_epochLength", "type": "uint256" },
         { "internalType": "uint256", "name": "_firstEpochNumber", "type": "uint256" },
         { "internalType": "uint256", "name": "_firstEpochBlock", "type": "uint256" }
@@ -40,7 +40,7 @@
     },
     {
       "inputs": [],
-      "name": "MNFST",
+      "name": "GVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
@@ -126,14 +126,14 @@
     },
     {
       "inputs": [],
-      "name": "sMNFST",
+      "name": "sGVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
     },
     {
       "inputs": [
-        { "internalType": "enum ManifestStaking.CONTRACTS", "name": "_contract", "type": "uint8" },
+        { "internalType": "enum GoodVibesOhmlyStaking.CONTRACTS", "name": "_contract", "type": "uint8" },
         { "internalType": "address", "name": "_address", "type": "address" }
       ],
       "name": "setContract",
