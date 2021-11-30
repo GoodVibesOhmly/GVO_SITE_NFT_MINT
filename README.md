@@ -111,13 +111,6 @@ Only the following people have merge access for the master branch.
 Minting NFT automagically stakes 33 tokens
 and each NFT comes with IRL membership benefits
 
-Hardcoded; 51% gov rights by Olympus + gOHM vested in treasury
-don't trust, but verify (on-chain) that we give back, incl Klima
-
-Need help: frond end dev + solidity to deploy on polygon/arbitrum
-Above all, your gigabrain ser, please poke holes, help us iterate
-
-This feels like the closest I've ever been to rethink my old biz
 Want sustainable incooome ser, try help safe planet, be near ocean
 And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
 
