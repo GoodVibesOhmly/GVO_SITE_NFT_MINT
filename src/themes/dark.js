@@ -24,7 +24,7 @@ const darkTheme = {
   primaryButtonBG: "#ca5b02",
   primaryButtonHoverBG: "#Ff7200",
   secondaryButtonHoverBG: "rgba(54, 56, 64, 1)",
-  outlinedPrimaryButtonHoverBG: "rgba(185,0,255,0.1)",
+  outlinedPrimaryButtonHoverBG: "rgba(202, 91, 2,0.1)",
   outlinedPrimaryButtonHoverColor: "#ca5b02",
   outlinedSecondaryButtonHoverBG: "transparent",
   outlinedSecondaryButtonHoverColor: "#F8CC82", //gold
