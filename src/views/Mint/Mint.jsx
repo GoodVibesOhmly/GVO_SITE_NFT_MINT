@@ -112,7 +112,7 @@ function Mint() {
                 <Paper className="ohm-card">
                   <Box display="flex" flexDirection="column" justifyContent="space-between" height="100%">
                     <Box>
-                      <Typography variant="h5">Creation</Typography>
+                      <Typography variant="h5">Innovatooor</Typography>
                       <Box className="preview gif-1"></Box>
                       {/* <Box className="mint-data" p={1}>
                       <Typography variant="body1" color="textSecondary">
@@ -155,7 +155,7 @@ function Mint() {
                 <Paper className="ohm-card">
                   <Box display="flex" flexDirection="column" justifyContent="space-between" height="100%">
                     <Box>
-                      <Typography variant="h5">Abundance</Typography>
+                      <Typography variant="h5">Explorooor</Typography>
                       <Box className="preview gif-2"></Box>
                       {/* <Box className="mint-data" p={1}>
                         <Typography variant="body1" color="textSecondary">
@@ -198,7 +198,7 @@ function Mint() {
                 <Paper className="ohm-card">
                   <Box display="flex" flexDirection="column" justifyContent="space-between" height="100%">
                     <Box>
-                      <Typography variant="h5">Flow</Typography>
+                      <Typography variant="h5">Enjoyooor</Typography>
                       <Box className="preview gif-3"></Box>
                       {/* <Box className="mint-data" p={1}>
                         <Typography variant="body1" color="textSecondary">
