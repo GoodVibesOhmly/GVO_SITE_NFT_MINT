@@ -1,13 +1,13 @@
 {
   "abi": [
     {
-      "inputs": [{ "internalType": "address", "name": "_MNFST", "type": "address" }],
+      "inputs": [{ "internalType": "address", "name": "_GVO", "type": "address" }],
       "stateMutability": "nonpayable",
       "type": "constructor"
     },
     {
       "inputs": [],
-      "name": "MNFST",
+      "name": "GVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"

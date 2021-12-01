@@ -1,6 +1,6 @@
 import { StableBond, LPBond, NetworkID, CustomBond, BondType } from "src/lib/Bond";
 import { addresses } from "src/constants";
-import { ReactComponent as MnfstOhmImg } from "src/assets/tokens/MNFST-OHM.svg";
+import { ReactComponent as MnfstOhmImg } from "src/assets/tokens/GVO-OHM.svg";
 import { ReactComponent as wETHImg } from "src/assets/tokens/wETH.svg";
 import { ReactComponent as sOhmImg } from "src/assets/tokens/token_sOHM.svg";
 
@@ -54,9 +54,9 @@ export const eth = new CustomBond({
   },
 });
 
-export const mnfst_ohm_lp = new CustomBond({
-  name: "mnfst_ohm_lp",
-  displayName: "MNFST-OHM LP",
+export const gvo_ohm_lp = new CustomBond({
+  name: "gvo_ohm_lp",
+  displayName: "GVO-OHM LP",
   bondToken: "OHM",
   bondType: BondType.LP,
   isAvailable: { [NetworkID.Mainnet]: true, [NetworkID.Testnet]: true },
@@ -150,7 +150,7 @@ export const sohm = new CustomBond({
 // Is it a stableCoin bond? use `new StableBond`
 // Is it an LP Bond? use `new LPBond`
 // Add new bonds to this array!!
-export const allBonds = [eth, mnfst_ohm_lp, sohm];
+export const allBonds = [eth, gvo_ohm_lp, sohm];
 export const allBondsMap = allBonds.reduce((prevVal, bond) => {
   return { ...prevVal, [bond.name]: bond };
 }, {});

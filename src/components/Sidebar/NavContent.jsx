@@ -4,7 +4,7 @@ import Social from "./Social";
 // import externalUrls from "./externalUrls";
 import { ReactComponent as StakeIcon } from "../../assets/icons/stake.svg";
 import { ReactComponent as BondIcon } from "../../assets/icons/bond.svg";
-import { ReactComponent as Logo } from "../../assets/icons/logo-mnfst.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logo-gvo.svg";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { trim, shorten } from "../../helpers";
 import { useAddress, useWeb3Context } from "src/hooks/web3Context";
@@ -42,12 +42,12 @@ function NavContent() {
       <Box className="dapp-sidebar-inner" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="manifest.gg" target="_blank">
+            <Link href="https://goodvibesohmly.xyz" target="_blank">
               <SvgIcon
                 color="primary"
                 component={Logo}
                 viewBox="0 0 36 32"
-                style={{ maxWidth: "52px", width: "52px", height: "46.22px" }}
+                style={{ maxWidth: "52px", width: "52px", height: "60px" }}
               />
             </Link>
 

@@ -3,7 +3,7 @@
     {
       "inputs": [
         { "internalType": "address", "name": "_treasury", "type": "address" },
-        { "internalType": "address", "name": "_sMNFST", "type": "address" },
+        { "internalType": "address", "name": "_sGVO", "type": "address" },
         { "internalType": "address", "name": "_genesisV1", "type": "address" },
         { "internalType": "string", "name": "_uri", "type": "string" }
       ],
@@ -192,7 +192,7 @@
     { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
     {
       "inputs": [],
-      "name": "sMNFST",
+      "name": "sGVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
@@ -269,8 +269,8 @@
       "type": "function"
     },
     {
-      "inputs": [{ "internalType": "address", "name": "_sMNFST", "type": "address" }],
-      "name": "setsMNFST",
+      "inputs": [{ "internalType": "address", "name": "_sGVO", "type": "address" }],
+      "name": "setsGVO",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -385,6 +385,6 @@
       "type": "function"
     },
     { "inputs": [], "name": "withdrawAllEth", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
-    { "inputs": [], "name": "withdrawAllsMNFST", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
+    { "inputs": [], "name": "withdrawAllsGVO", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
   ]
 }

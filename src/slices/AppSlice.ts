@@ -1,8 +1,8 @@
 import { BigNumber, ethers } from "ethers";
 import { addresses } from "../constants";
-import { abi as ManifestStaking } from "../abi/ManifestStaking.json";
-// import { abi as MNFST } from "../abi/ManifestERC20.json";
-import { abi as sMNFST } from "../abi/sManifestERC20.json";
+import { abi as GoodVibesOhmlyStaking } from "../abi/GoodVibesOhmlyStaking.json";
+// import { abi as GVO } from "../abi/Good Vibes OhmlyERC20.json";
+import { abi as sGVO } from "../abi/sGoodVibesOhmlyERC20.json";
 import { abi as Genesis1155Abi } from "../abi/Genesis1155.json";
 import { setAll, getTokenPrice, getMarketPrice } from "../helpers";
 // import { NodeHelper } from "../helpers/NodeHelper";
@@ -68,15 +68,15 @@ export const loadAppDetails = createAsyncThunk(
     try {
       const stakingContract = new ethers.Contract(
         addresses[networkID].STAKING_ADDRESS as string,
-        ManifestStaking,
+        GoodVibesOhmlyStaking,
         provider,
       );
-      const smnfstMainContract = new ethers.Contract(addresses[networkID].SMNFST_ADDRESS as string, sMNFST, provider);
+      const sGVOMainContract = new ethers.Contract(addresses[networkID].sGVO_ADDRESS as string, sGVO, provider);
 
       epoch = await stakingContract.epoch();
       currentIndex = await stakingContract.index();
-      circSupply = (await smnfstMainContract.circulatingSupply()) / Math.pow(10, 9);
-      totalSupply = await smnfstMainContract.totalSupply();
+      circSupply = (await sGVOMainContract.circulatingSupply()) / Math.pow(10, 9);
+      totalSupply = await sGVOMainContract.totalSupply();
       stakingTVL = ((await stakingContract.contractBalance()) / Math.pow(10, 9)) * marketPrices.marketPrice;
       stakingReward = epoch.distribute / Math.pow(10, 9);
       stakingRebase = stakingReward / circSupply;

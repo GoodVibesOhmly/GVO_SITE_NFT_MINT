@@ -2,7 +2,7 @@
   "abi": [
     {
       "inputs": [
-        { "internalType": "address", "name": "_MNFST", "type": "address" },
+        { "internalType": "address", "name": "_GVO", "type": "address" },
         { "internalType": "address", "name": "_principle", "type": "address" },
         { "internalType": "address", "name": "_treasury", "type": "address" },
         { "internalType": "address", "name": "_DAO", "type": "address" },
@@ -80,7 +80,7 @@
     },
     {
       "inputs": [],
-      "name": "MNFST",
+      "name": "GVO",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
@@ -274,7 +274,7 @@
     },
     {
       "inputs": [
-        { "internalType": "enum ManifestBondDepository.PARAMETER", "name": "_parameter", "type": "uint8" },
+        { "internalType": "enum GoodVibesOhmlyBondDepository.PARAMETER", "name": "_parameter", "type": "uint8" },
         { "internalType": "uint256", "name": "_input", "type": "uint256" }
       ],
       "name": "setBondTerms",

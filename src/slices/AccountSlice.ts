@@ -1,8 +1,8 @@
 import { BigNumber, ethers } from "ethers";
 import { addresses } from "../constants";
 import { abi as ierc20Abi } from "../abi/IERC20.json";
-import { abi as ManifestERC20Abi } from "../abi/ManifestERC20.json";
-import { abi as sManifestERC20Abi } from "../abi/sManifestERC20.json";
+import { abi as GoodVibesOhmlyERC20Abi } from "../abi/GoodVibesOhmlyERC20.json";
+import { abi as sGoodVibesOhmlyERC20Abi } from "../abi/sGoodVibesOhmlyERC20.json";
 import { abi as sOHMv2 } from "../abi/sOhmv2.json";
 import { abi as Genesis1155Abi } from "../abi/Genesis1155.json";
 
@@ -16,15 +16,19 @@ import { IBaseAddressAsyncThunk, ICalcUserBondDetailsAsyncThunk } from "./interf
 export const getBalances = createAsyncThunk(
   "account/getBalances",
   async ({ address, networkID, provider }: IBaseAddressAsyncThunk) => {
-    const mnfstContract = new ethers.Contract(addresses[networkID].MNFST_ADDRESS as string, ManifestERC20Abi, provider);
-    const mnfstBalance = await mnfstContract.balanceOf(address);
-
-    const smnfstContract = new ethers.Contract(
-      addresses[networkID].SMNFST_ADDRESS as string,
-      sManifestERC20Abi,
+    const gvoContract = new ethers.Contract(
+      addresses[networkID].GVO_ADDRESS as string,
+      GoodVibesOhmlyERC20Abi,
       provider,
     );
-    const smnfstBalance = await smnfstContract.balanceOf(address);
+    const gvoBalance = await gvoContract.balanceOf(address);
+
+    const sGVOContract = new ethers.Contract(
+      addresses[networkID].sGVO_ADDRESS as string,
+      sGoodVibesOhmlyERC20Abi,
+      provider,
+    );
+    const sGVOBalance = await sGVOContract.balanceOf(address);
 
     const sohmContract = new ethers.Contract(addresses[networkID].SOHM_ADDRESS as string, sOHMv2, provider);
     const sohmBalance = await sohmContract.balanceOf(address);
@@ -32,8 +36,8 @@ export const getBalances = createAsyncThunk(
     return {
       balances: {
         sohm: ethers.utils.formatUnits(sohmBalance, "gwei"),
-        mnfst: ethers.utils.formatUnits(mnfstBalance, "gwei"),
-        smnfst: ethers.utils.formatUnits(smnfstBalance, "gwei"),
+        gvo: ethers.utils.formatUnits(gvoBalance, "gwei"),
+        sGVO: ethers.utils.formatUnits(sGVOBalance, "gwei"),
       },
     };
   },
@@ -42,12 +46,12 @@ export const getBalances = createAsyncThunk(
 interface IUserAccountDetails {
   balances: {
     sohm: string;
-    mnfst: string;
-    smnfst: string;
+    gvo: string;
+    sGVO: string;
   };
   staking: {
-    mnfstStake: number;
-    mnfstUnstake: number;
+    gvoStake: number;
+    gvoUnstake: number;
   };
   genesis: {
     saleEligible: boolean;
@@ -59,8 +63,8 @@ interface IUserAccountDetails {
 export const loadAccountDetails = createAsyncThunk(
   "account/loadAccountDetails",
   async ({ networkID, provider, address }: IBaseAddressAsyncThunk) => {
-    let mnfstBalance = 0;
-    let smnfstBalance = 0;
+    let gvoBalance = 0;
+    let sGVOBalance = 0;
     let sohmBalance = 0;
     let stakeAllowance = 0;
     let unstakeAllowance = 0;
@@ -72,30 +76,30 @@ export const loadAccountDetails = createAsyncThunk(
     let genesisClaimed2 = 0;
     let genesisClaimed3 = 0;
 
-    if (addresses[networkID].MNFST_ADDRESS) {
-      const mnfstContract = new ethers.Contract(
-        addresses[networkID].MNFST_ADDRESS as string,
-        ManifestERC20Abi,
+    if (addresses[networkID].GVO_ADDRESS) {
+      const gvoContract = new ethers.Contract(
+        addresses[networkID].GVO_ADDRESS as string,
+        GoodVibesOhmlyERC20Abi,
         provider,
       );
 
-      mnfstBalance = await mnfstContract.balanceOf(address);
+      gvoBalance = await gvoContract.balanceOf(address);
       stakeAllowance =
-        (await mnfstContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS)) / Math.pow(10, 18);
+        (await gvoContract.allowance(address, addresses[networkID].STAKING_HELPER_ADDRESS)) / Math.pow(10, 18);
     }
 
-    if (addresses[networkID].SMNFST_ADDRESS) {
-      const smnfstContract = new ethers.Contract(
-        addresses[networkID].SMNFST_ADDRESS as string,
-        sManifestERC20Abi,
+    if (addresses[networkID].sGVO_ADDRESS) {
+      const sGVOContract = new ethers.Contract(
+        addresses[networkID].sGVO_ADDRESS as string,
+        sGoodVibesOhmlyERC20Abi,
         provider,
       );
 
-      smnfstBalance = await smnfstContract.balanceOf(address);
+      sGVOBalance = await sGVOContract.balanceOf(address);
 
       try {
         unstakeAllowance =
-          (await smnfstContract.allowance(address, addresses[networkID].STAKING_ADDRESS)) / Math.pow(10, 18);
+          (await sGVOContract.allowance(address, addresses[networkID].STAKING_ADDRESS)) / Math.pow(10, 18);
       } catch (e) {
         console.error(e);
       }
@@ -130,12 +134,12 @@ export const loadAccountDetails = createAsyncThunk(
     return {
       balances: {
         sohm: ethers.utils.formatUnits(sohmBalance, "gwei"),
-        mnfst: ethers.utils.formatUnits(mnfstBalance, "gwei"),
-        smnfst: ethers.utils.formatUnits(smnfstBalance, "gwei"),
+        gvo: ethers.utils.formatUnits(gvoBalance, "gwei"),
+        sGVO: ethers.utils.formatUnits(sGVOBalance, "gwei"),
       },
       staking: {
-        mnfstStake: +stakeAllowance,
-        mnfstUnstake: +unstakeAllowance,
+        gvoStake: +stakeAllowance,
+        gvoUnstake: +unstakeAllowance,
       },
       genesis: {
         saleEligible: genesisSaleEligible,
@@ -210,8 +214,8 @@ interface IAccountSlice {
   bonds: { [key: string]: IUserBondDetails };
   balances: {
     sohm: string;
-    mnfst: string;
-    smnfst: string;
+    gvo: string;
+    sGVO: string;
   };
   genesis: {
     saleEligible: boolean;
@@ -224,7 +228,7 @@ interface IAccountSlice {
 const initialState: IAccountSlice = {
   loading: true,
   bonds: {},
-  balances: { sohm: "", mnfst: "", smnfst: "" },
+  balances: { sohm: "", gvo: "", sGVO: "" },
   genesis: { saleEligible: false, claimed: "0", balance: "0" },
 };
 

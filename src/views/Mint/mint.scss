@@ -8,7 +8,7 @@
   .title {
     font-weight: 600;
     color: transparent;
-    background: linear-gradient(to right, #aa11ee, #9f11ef);
+    background: linear-gradient(to right, #Ff7200, #ca5b02);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -34,13 +34,13 @@
     background-repeat: no-repeat;
     background-position-x: center;
     &.gif-1 {
-      background-image: url("../../assets/images/01_creation.gif");
+      background-image: url("../../assets/images/nft.gif");
     }
     &.gif-2 {
-      background-image: url("../../assets/images/02_abundance.gif");
+      background-image: url("../../assets/images/nft.gif");
     }
     &.gif-3 {
-      background-image: url("../../assets/images/03_flow.gif");
+      background-image: url("../../assets/images/nft.gif");
     }
   }
   .mint-data {

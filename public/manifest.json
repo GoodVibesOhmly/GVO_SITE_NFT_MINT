@@ -1,8 +1,8 @@
 {
-  "short_name": "MNFST",
+  "short_name": "gvo",
   "start_url": ".",
   "homepage": "./",
-  "name": "MNFST",
+  "name": "gvo",
   "launch_path": "/public/index.html",
   "icons": [
     {

@@ -86,13 +86,13 @@ function BondRedeem({ bond }) {
           <div className="data-row">
             <Typography>Pending Rewards</Typography>
             <Typography className="price-data">
-              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bond.interestDue, 4)} MNFST`}
+              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bond.interestDue, 4)} GVO`}
             </Typography>
           </div>
           <div className="data-row">
             <Typography>Claimable Rewards</Typography>
             <Typography className="price-data">
-              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bond.pendingPayout, 4)} MNFST`}
+              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bond.pendingPayout, 4)} GVO`}
             </Typography>
           </div>
           <div className="data-row">

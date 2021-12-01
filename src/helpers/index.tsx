@@ -7,18 +7,18 @@ import { abi as PairContract } from "../abi/PairContract.json";
 import { SvgIcon } from "@material-ui/core";
 import { ReactComponent as OhmImg } from "../assets/tokens/token_OHM.svg";
 import { ReactComponent as SOhmImg } from "../assets/tokens/token_sOHM.svg";
-import { ReactComponent as MnfstImg } from "../assets/tokens/MNFST.svg";
-import { ReactComponent as SMnfstImg } from "../assets/tokens/sMNFST.svg";
+import { ReactComponent as MnfstImg } from "../assets/tokens/GVO.svg";
+import { ReactComponent as sGVOImg } from "../assets/tokens/sGVO.svg";
 
 import { JsonRpcSigner, StaticJsonRpcProvider } from "@ethersproject/providers";
 import { IBaseAsyncThunk } from "src/slices/interfaces";
-import { mnfst_ohm_lp } from "./AllBonds";
+import { gvo_ohm_lp } from "./AllBonds";
 
 // NOTE (appleseed): this looks like an outdated method... we now have this data in the graph (used elsewhere in the app)
 export async function getMarketPrice({ networkID, provider }: IBaseAsyncThunk) {
-  const mnfst_ohm_address = mnfst_ohm_lp.getAddressForReserve(networkID);
-  // console.log("mnfst_ohm slp: ", mnfst_ohm_address);
-  const pairContract = new ethers.Contract(mnfst_ohm_address, PairContract, provider);
+  const gvo_ohm_address = gvo_ohm_lp.getAddressForReserve(networkID);
+  // console.log("gvo_ohm slp: ", gvo_ohm_address);
+  const pairContract = new ethers.Contract(gvo_ohm_address, PairContract, provider);
   // console.log("pair contract: ", pairContract);
   const reserves = await pairContract.getReserves();
   // console.log("reserves: ", reserves);
@@ -134,17 +134,17 @@ export function getMnfstTokenImage(w?: number, h?: number) {
   return <SvgIcon component={MnfstImg} viewBox="0 0 32 32" style={{ height, width }} />;
 }
 
-export function getSmnfstTokenImage(w?: number, h?: number) {
+export function getsGVOTokenImage(w?: number, h?: number) {
   const height = h == null ? "32px" : `${h}px`;
   const width = w == null ? "32px" : `${w}px`;
-  return <SvgIcon component={SMnfstImg} viewBox="0 0 32 32" style={{ height, width }} />;
+  return <SvgIcon component={sGVOImg} viewBox="0 0 32 32" style={{ height, width }} />;
 }
 
 export function getTokenImage(name: string) {
   if (name === "ohm") return getOhmTokenImage();
   if (name === "sohm") return getSohmTokenImage();
-  if (name === "mnfst") return getMnfstTokenImage();
-  if (name === "smnfst") return getSmnfstTokenImage();
+  if (name === "gvo") return getMnfstTokenImage();
+  if (name === "sGVO") return getsGVOTokenImage();
 }
 
 // TS-REFACTOR-NOTE - Used for:
