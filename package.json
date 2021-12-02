@@ -20,7 +20,7 @@
     "@ethersproject/bignumber": "^5.5.0",
     "@ethersproject/bytes": "^5.0.5",
     "@ethersproject/contracts": "^5.0.5",
-    "@ethersproject/providers": "^5.0.12",
+    "@ethersproject/providers": "^5.5.1",
     "@ethersproject/solidity": "^5.0.9",
     "@ethersproject/units": "^5.4.0",
     "@ledgerhq/iframe-provider": "^0.4.2",
