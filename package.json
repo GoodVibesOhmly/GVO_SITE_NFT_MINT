@@ -84,7 +84,7 @@
     "autoprefixer": "^10.2.4",
     "chalk": "^5.0.0",
     "eslint": "^7.31.0",
-    "eslint-config-airbnb": "^19.0.1",
+    "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.22.1",
