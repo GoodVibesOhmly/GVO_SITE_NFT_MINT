@@ -119,6 +119,13 @@ Only the following people have merge access for the master branch.
 
 ### GVO / Good Vibes Ohmly
 
+We truly believe Olympus DAO is the best-decentralized bank, and we’re the first brand to open an account. We look forward to being in the top 90 OHM holders and lease an Alva Yacht 90 EX 
+
+![IMG_20200616_195121_616](https://user-images.githubusercontent.com/45092543/146646478-67ae3570-56bc-4a67-bb3a-bf26cd2b129c.jpg)
+
+
+### “A rising tide lifts all boats"
+
 Ohm Forks and whitelists have been a huge pain point to keep the good vibes flowing. Burnout in crypto is no joke. Anyone else getting discord fatigue? That shit is getting overwhelming. Definitely a great tool. But wow it’s a lot. So much going on at all times! The whitelisting games  have been so fricking distracting tbh. We’re way too busy working at Odyssey to make sure we’re on the WL, and we think our time is better spend figuring out how to buy a yacht without selling. Staking OHM should be enough to play. 
 
 Best adventure is shared adventure. Almost anything money can do, frens can do better. In so many ways, frens with a boat is better than owning a boat you don’t use 24/7. Imagine having a Swiss Association to buy a yacht without needing to sell! Imagine a 0% interest loan in LUSD to lease a yacht without needing to sell any OHM from our treasury. 
