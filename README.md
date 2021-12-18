@@ -112,6 +112,11 @@ Only the following people have merge access for the master branch.
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
 
+### NEW UX
+
+<img width="964" alt="Screenshot 2021-12-15 at 01 15 56" src="https://user-images.githubusercontent.com/45092543/146645816-9e15560f-61b7-4e20-a170-654c731027ca.png">
+
+
 ### GVO / Good Vibes Ohmly
 
 Ohm Forks and whitelists have been a huge pain point to keep the good vibes flowing. Burnout in crypto is no joke. Anyone else getting discord fatigue? That shit is getting overwhelming. Definitely a great tool. But wow it’s a lot. So much going on at all times! The whitelisting games  have been so fricking distracting tbh. We’re way too busy working at Odyssey to make sure we’re on the WL, and we think our time is better spend figuring out how to buy a yacht without selling. Staking OHM should be enough to play. 
