@@ -139,45 +139,32 @@ A like-minded, yet exclusive community is what GVO aims to be. We will adapt as 
 
 Since the token is not a security or financial instrument, additional benefits will feature in a friendly and communal dashboard provided by Olympus Pro. Similar to any NFT mint and display website with roadmap and cohmmunity, we add upon it the good OHMly vibes with their bonding and staking growth. To that effect, the user experience aims to be a beautiful blend of the artistic and the OHMly. 
 
-### GVO / Gitflow
+### GVO / GITFLOW
 
-1: git checkout develop
-2: git pull: make sure you have all the latest changes
-3: create new branch using git flow principles: 
+* : git checkout develop
+* : git pull: make sure you have all the latest changes
+* : create new branch using git flow principles: 
     prefix with
     feat/ for new code or code changes
     fix/ for hotfixes
     example: feat/update_content_mint_page
-4: make changes
-5: commit with semantic commit message: 
+* : make changes
+* : commit with semantic commit message: 
      example: git commit -m "feat: updated content on mint page"
      more info on semantic commits
-6: push
-7: Open pull request into develop, use a good description, consider dividing it into # Scope (what is the goal of the PR), # Work done (What did you change to reach the goal), # Steps to test (how can a reviewer test your changes)
-8: request review from ohmie
-9a: make any requested changes (go back to step 4)
-9b: if approved merge pull request
+* : push
+* : Open pull request into develop, use a good description, consider dividing it into # Scope (what is the goal of the PR), # Work done (What did you change to reach the goal), # Steps to test (how can a reviewer test your changes)
+* : request review from ohmie
+* : make any requested changes (go back to step 4)
+* : if approved merge pull request
 
-### New Discord Roles @ GVO
+### TO DO LIST
 
-* Coordinatooor : sort of the navigator, stratego style
-* Daooor : is making us run the show DAO style
-* Moderatooor : runs the podcast & monthly community call
-* Art Directooor : curator of fine art for the NFT Vaults
-* Illustratooor : makes stuff look good
-* Enginooor : shipping full-stack web3 code
-* Threadooor : is fricking good at doing the CT thing
-* Incubatooor : wants to see more D2D collabs ...
-* Collectooor : wants to buy NFT's
-* Calculatooor : makes sure the treasury is growing
-* Documentooor : keeps notion, airtable and github clean
-* Enjoyooor : L1 guestpass
-* Explorooor : L2 guestpass
-* Contributooor : is earning incooome by donating time
-* Whitelistooor : get's all the good stuff as bonus
-* Innovatooor : the OG's on the VIP list
-* Robotooor : Discord bot doing all the heavy lifting
-* Administratooor: Makes sure the Discord bots are gucci
+* Create Landing Page to Claim GVO MINT PASS (based on new UX; see above)
+* Add play button on hero image with the VO file from our artist Liquidiot
+
+![samuel-regan-asante-7sT2VvDS7gQ-unsplash](https://user-images.githubusercontent.com/45092543/146646152-b9cdff22-109b-426e-adae-7496fdf88ef7.jpg)
+
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
 
