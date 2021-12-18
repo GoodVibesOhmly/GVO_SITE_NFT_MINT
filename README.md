@@ -120,6 +120,27 @@ and each NFT comes with IRL membership benefits
 Want sustainable incooome ser, try help safe planet, be near ocean
 And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
 
+# GVO / Gitflow
+
+1: git checkout develop
+2: git pull: make sure you have all the latest changes
+3: create new branch using git flow principles: 
+    prefix with
+    feat/ for new code or code changes
+    fix/ for hotfixes
+    example: feat/update_content_mint_page
+4: make changes
+5: commit with semantic commit message: 
+     example: git commit -m "feat: updated content on mint page"
+     more info on semantic commits
+6: push
+7: Open pull request into develop, use a good description, consider dividing it into # Scope (what is the goal of the PR), # Work done (What did you change to reach the goal), # Steps to test (how can a reviewer test your changes)
+8: request review from ohmie
+9a: make any requested changes (go back to step 4)
+9b: if approved merge pull request
+
+
+
 # New Discord Roles @ GVO
 
 * Coordinatooor : sort of the navigator, stratego style
