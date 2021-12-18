@@ -108,19 +108,33 @@ Only the following people have merge access for the master branch.
 * [@royscheeren](https://github.com/royscheeren)
 
 
-## 🗣 Community
+### 🗣 Community
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
 
-# GVO / Good Vibes Ohmly
+### GVO / Good Vibes Ohmly
 
-Minting NFT automagically stakes 33 tokens
-and each NFT comes with IRL membership benefits
+Ohm Forks and whitelists have been a huge pain point to keep the good vibes flowing. Burnout in crypto is no joke. Anyone else getting discord fatigue? That shit is getting overwhelming. Definitely a great tool. But wow it’s a lot. So much going on at all times! The whitelisting games  have been so fricking distracting tbh. We’re way too busy working at Odyssey to make sure we’re on the WL, and we think our time is better spend figuring out how to buy a yacht without selling. Staking OHM should be enough to play. 
 
-Want sustainable incooome ser, try help safe planet, be near ocean
-And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
+Best adventure is shared adventure. Almost anything money can do, frens can do better. In so many ways, frens with a boat is better than owning a boat you don’t use 24/7. Imagine having a Swiss Association to buy a yacht without needing to sell! Imagine a 0% interest loan in LUSD to lease a yacht without needing to sell any OHM from our treasury. 
 
-# GVO / Gitflow
+There’s no need to jump in our LiveTheLifeTV Discord server and play games or boost the server. You didn’t unstake the past 33 days?  Simply claim your FREE mint pass and you’re gucci. Upcoming NFT’s will give ohmies access to the club with IRL benefits like living the yacht club life. Obviously we will offset our footprint with a Klima collab. The Alva Yacht is 100% solar powered. ⚓️
+
+ARCx unlocks our mission to create 3 GVO MINT PASSES with 3 different levels. You have a BAYC or MAYC? Welcohm! You are part of Bankless DAO? Welcohm. To get the highest score you need need to be staking OHM for at least 33 days… 
+
+We're sailing towards our dream island; where we will try to balance DAO's, NFT's and Defi. We are supporting our planet earth and mother ocean with Klima & Diatom, help launching the Olympus Odyssey Genesis Collection & NFT Platform, featuring Dimitri Daniloff, and starting to shape a safe haven for the 9999 people that become frens along the way of exploring the Good Vibes Ohmly project. WAGMI, have fun, run a sustainable fund, and bootstrap our dreams through NFT sales to lease a solar-powered catamaran, and buy a couple of surf view co-working places to live the life with ohmies. We will now drop the anchor and create a place that will feel like HOHM! (⚓️,⚓️ )
+
+We bring Zeus’s original vision to life by backing our entire treasury by gOHM. GVO is a membership community comprising of both digital and off-line benefits for members. It is important to note that we're not a currency or crypto project. We are a membership community that leverages a token as proof of membership. 
+
+The GVO token enables us to properly coordinate. You mint an NFT on a very slight bonding curve purchases made in gOHM. The NFT gives you membership and yearly GVO emissions for access to services you can use in app. All money raised from NFT’s is held in the Treasury in gOHM - some of the gOHM is used to pair with GVO and the treasury management team use the other gOHM to mint safe loans at 0% in olympusUSD (releasing in January 2022) which have a mint fee of 1% - the olympusUSD is converted into fiat and used to purchase Good Vibes real world assets. In this way the Treasury is ever growing from NFT membership sales - trading fees from gOHM-GVO swaps and the compounding rewards in gOHM
+ 
+The goal is as much financial as it is about living the life. We want to express a feeling of community where people that love food, wine, art and tech come together. Resident artist from Genesis Dimitri Daniloff has bestowed us with his  artwork to support the movement.  Dimitri and our GVO art directooors will curate NFT’s from upcoming artists to join the initiative. The GVO brand needs to be bold, powerful, full of style and expressing freedom. This is just the genesis, those with our Values will always find a HOHM at GVO.
+
+A like-minded, yet exclusive community is what GVO aims to be. We will adapt as we go along as with everything in the Metaverse, but we are a place for both tech-savvy and those who care only about the “rebases” alike, to find a HOHM. We attract a diverse audience, who may associate with one of our many values or offerings. 
+
+Since the token is not a security or financial instrument, additional benefits will feature in a friendly and communal dashboard provided by Olympus Pro. Similar to any NFT mint and display website with roadmap and cohmmunity, we add upon it the good OHMly vibes with their bonding and staking growth. To that effect, the user experience aims to be a beautiful blend of the artistic and the OHMly. 
+
+### GVO / Gitflow
 
 1: git checkout develop
 2: git pull: make sure you have all the latest changes
@@ -139,9 +153,7 @@ And above all cultivate Good Vibes Ohmly, so ohmies don't burn out
 9a: make any requested changes (go back to step 4)
 9b: if approved merge pull request
 
-
-
-# New Discord Roles @ GVO
+### New Discord Roles @ GVO
 
 * Coordinatooor : sort of the navigator, stratego style
 * Daooor : is making us run the show DAO style
