@@ -118,9 +118,9 @@ Only the following people have merge access for the master branch.
 
 
 
-### GVO / Good Vibes Ohmly
+### GVO / Good Vibes Ohmly / Powered by LiveTheLifeTV
 
-### We truly believe Olympus DAO is the best-decentralized bank, and we’re the first brand to open an account. We look forward to being in the top 90 OHM holders and lease an Alva Yacht 90 EX 
+### Olympus DAO is the best-decentralized bank, and we’re the first brand to open an account. We look forward to being in the top 90 OHM holders and lease an Alva Yacht 90 EX 
 
 <img width="911" alt="Screenshot 2021-12-18 at 16 37 02" src="https://user-images.githubusercontent.com/45092543/146646760-15ac13fd-3147-4a0d-a3b5-9466fd17b473.png">
 
