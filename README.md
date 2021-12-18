@@ -114,14 +114,15 @@ Only the following people have merge access for the master branch.
 
 ### NEW UX
 
-<img width="964" alt="Screenshot 2021-12-15 at 01 15 56" src="https://user-images.githubusercontent.com/45092543/146645816-9e15560f-61b7-4e20-a170-654c731027ca.png">
+<img width="870" alt="Screenshot 2021-12-18 at 16 36 27" src="https://user-images.githubusercontent.com/45092543/146646734-723dd5a5-1fb1-44b9-91ae-d4038a9175f9.png">
+
 
 
 ### GVO / Good Vibes Ohmly
 
 ### We truly believe Olympus DAO is the best-decentralized bank, and we’re the first brand to open an account. We look forward to being in the top 90 OHM holders and lease an Alva Yacht 90 EX 
 
-![IMG_20200616_195121_616](https://user-images.githubusercontent.com/45092543/146646478-67ae3570-56bc-4a67-bb3a-bf26cd2b129c.jpg)
+<img width="911" alt="Screenshot 2021-12-18 at 16 37 02" src="https://user-images.githubusercontent.com/45092543/146646760-15ac13fd-3147-4a0d-a3b5-9466fd17b473.png">
 
 
 ### “A rising tide lifts all boats"
@@ -165,15 +166,19 @@ Since the token is not a security or financial instrument, additional benefits w
 * : make any requested changes (go back to step 4)
 * : if approved merge pull request
 
+<img width="935" alt="Screenshot 2021-12-18 at 16 37 50" src="https://user-images.githubusercontent.com/45092543/146646775-428fb6df-2d6b-4ea3-aad9-4af0eb1511ca.png">
+
+
 ### TO DO LIST
 
 * Create Landing Page to Claim GVO MINT PASS (based on new UX; see above)
 * Add play button on hero image with the VO file from our artist Liquidiot
-
-![samuel-regan-asante-7sT2VvDS7gQ-unsplash](https://user-images.githubusercontent.com/45092543/146646152-b9cdff22-109b-426e-adae-7496fdf88ef7.jpg)
 
 
 * [Join our Discord](https://discord.gg/qQxDvkyueF) and ask how you can get involved with the DAO!
 
 
 __ Forked From [Ω Olympus Frontend](https://app.olympusdao.finance/)
+
+
+<img width="874" alt="Screenshot 2021-12-18 at 16 41 34" src="https://user-images.githubusercontent.com/45092543/146646815-b7d3f3e0-6457-4d8d-b22e-e438f439db90.png">
