@@ -4282,23 +4282,24 @@ bn.js@^5.0.0, bn.js@^5.1.1:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-5.2.0.tgz#358860674396c6997771a9d051fcc1b57d4ae002"
   integrity sha512-D7iWRBvnZE8ecXiLj/9wbxH7Tk79fAh8IHaTNq1RWRixsS02W+5qS+iE9yq6RYl0asXx5tw0bLhmT5pIfbSquw==
 
-bnc-notify@^1.5.0:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/bnc-notify/-/bnc-notify-1.9.1.tgz#cd8ec8e5f5482cf78b6caea7de35288ee73d6b32"
-  integrity sha512-OWXI6KIOU/0CWhlFBiIStfbio3X5uUTeBjG6h4R7Ng6MABqZHMFRCNOgVQ50HdwwZiaFMuA3l23cZLxJjyaY0Q==
+bnc-notify@^1.9.7:
+  version "1.9.7"
+  resolved "https://registry.yarnpkg.com/bnc-notify/-/bnc-notify-1.9.7.tgz#22a6327561a4734905a8ab595105b77c8051da02"
+  integrity sha512-lY/A/voILmJ8KWbqeVSPySz+DxPQZVgFundLySI3KR/KIhK5bxUdGoh1cBEY4JDZMNkhr0kPlpYGGCyE8REGWQ==
   dependencies:
     bignumber.js "^9.0.0"
-    bnc-sdk "^3.5.0"
+    bnc-sdk "4.6.3"
     lodash.debounce "^4.0.8"
     regenerator-runtime "^0.13.3"
     uuid "^3.3.3"
 
-bnc-sdk@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/bnc-sdk/-/bnc-sdk-3.5.0.tgz#b863a2d947857d87c56d53261bd43529f1a5c03e"
-  integrity sha512-4CSon8xRTjtD7YOUDJcyqZ/bKCNNwDc4sOPq6O19AlolYTsbbVvh+p5EOmYqL4Re30hI3lKQxN4sh12A6VnAPQ==
+bnc-sdk@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/bnc-sdk/-/bnc-sdk-4.6.3.tgz#c852f091a5e84bb77864543b0775b35ebdbb1724"
+  integrity sha512-rva+LyJuAm+U6xwZYqlsDxKaMy3EpHBqkOL93UDih7iwXDYnUr87n27pnGCw3B8xRBeRhCBC/VZMuzRFeea/Hw==
   dependencies:
     crypto-es "^1.2.2"
+    nanoid "^3.3.1"
     rxjs "^6.6.3"
     sturdy-websocket "^0.1.12"
 
@@ -11361,6 +11362,11 @@ nanoid@^3.0.2, nanoid@^3.1.20, nanoid@^3.1.23:
   version "3.1.25"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.25.tgz#09ca32747c0e543f0e1814b7d3793477f9c8e152"
   integrity sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==
+
+nanoid@^3.3.1:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
+  integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
